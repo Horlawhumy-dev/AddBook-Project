@@ -1,12 +1,14 @@
+:root{
+    --linear-grad-color: linear-gradient(120deg, rgb(3, 198, 247), blue);
+}
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
-    /* background-image: url(images/background.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
+    height: 100vh;
+    background: linear-gradient(120deg, rgb(3, 198, 247), blue);
 }
 
 
@@ -16,10 +18,12 @@ body{
     justify-content: flex-start;
     background-color: rgba(211, 211, 211, 0.322);
     padding: 1em;
-    width: 90%;
+    margin: 25% auto;
+    width: 70%;
     border-radius: 10px;
     box-shadow: 0 2px 5px ;
 }
+
 
 header{
     margin-bottom: 0;
@@ -29,8 +33,8 @@ header{
 
 header h2{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
-   
+    font-size: 2em; 
+    text-align: center;
 
 }
 
@@ -39,10 +43,30 @@ header h2{
     color: #ffffff;
     padding: 5px;
     border: none;
+    border-radius: 5px;
     width: 90%;
     font-weight: bold;
     visibility: hidden;
+    text-align: center;
   
+}
+
+.success{
+    background-color: #fff;
+    color: var(--linear-grad-color);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    font-weight: bold;
+    visibility: hidden;
+    text-align: center;
+  
+}
+
+form{
+    margin: 0 auto;
+    width: 90%;
 }
    
 form label{
@@ -55,28 +79,60 @@ form label{
 
 input[type="text"]{
     width: 90%;
-    border: 2px solid black;
+    border: none;
     padding: .5em;
     margin-bottom: 10px;
     border-radius: 5px;
+    outline: none;
 }
 
 #submit{
-    padding: 1em 1.5em;
+    padding: .5em 1em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    border: 2px solid black;
+    border-radius: 5px;
     display: block;
-    background-color: red;
-    color: blue;
+    background: red;
+    color: #fff;
     border: none;
+    width: 90%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background .5s ease-out;
+    margin-bottom: 1rem;
+}
+
+#submit:hover{
+    background-color: var(--linear-grad-color);
+    border: 1px solid #000;
 }
 
 #table{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 10px;
     border-top: 2px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    
+    color: rgb(0, 0, 0); 
 }
 
+#table thead tr{
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.btn-delete{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.btn-delete span{
+    font-size: 20px;
+    color: #fff;
+   
+}
+
+.btn-delete span:active{
+    color: red;
+}
